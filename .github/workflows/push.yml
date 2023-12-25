@@ -16,11 +16,11 @@ jobs:
       - name: Login to Docker hub 
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.USER }}
+          username: ${{ secrets.LOGIN }}
           password: ${{ secrets.PASSWORD }}
 
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: ${{ secrets.USER }}/devops_lab03:latest
+          tags: ${{ secrets.LOGIN }}/devops_lab03:latest
